@@ -14,7 +14,7 @@ keywords = ["random", "rng"]
 categories = ["algorithms", "no-std"]
 autobenches = true
 edition = "2024"
-rust-version = "1.85"
+# rust-version = "1.85"
 include = ["src/", "LICENSE-*", "README.md", "CHANGELOG.md", "COPYRIGHT"]
 
 [package.metadata.docs.rs]
@@ -65,12 +65,16 @@ unbiased = []
 # Option: enable logging
 log = ["dep:log"]
 
-[workspace]
-members = [
-    "rand_chacha",
-    "rand_pcg",
-]
-exclude = ["benches", "distr_test"]
+#[workspace]
+#members = [
+#    "rand_chacha",
+#     rand_chacha  = { path = "/data/data/com.termux.nix/files/home/pick-up-nix2/vendor/rust/cargo2nix/submodules/rand/rand_chacha" }
+#    "rand_pcg",
+#]
+#exclude = [
+#"benches",
+#"distr_test"
+#]
 
 [dependencies]
 rand_core = { version = "0.10.0-rc-2", default-features = false }
